@@ -1,0 +1,18 @@
+
+v = open("recept")
+
+indata =  v.read()
+
+data = indata.split('\n')
+data2 = indata.split(' ') 
+for i in range(0, len(data2))
+    if i == s
+    
+    
+
+enmatris = []
+#print data2.index('meat')
+enmatris.append(data2[0:6])
+enmatris.append(data2[6:12])
+enmatris.append(data2[13:17])
+print enmatris

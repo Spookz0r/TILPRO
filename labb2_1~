@@ -1,0 +1,2 @@
+v = open('recept.txt','r')
+print v

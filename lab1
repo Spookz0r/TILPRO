@@ -1,0 +1,77 @@
+A = ['X', 'O', '20' , 'X', 'X', 'X', 'X', 'X', '4']
+B =  ['O', 'O', 'X' , 'O', 'O', 'O', 'O', 'O', '4']
+C = ['1', '6', '20' , 'B', 'A', 'J', 'S', 'X', '4']
+
+
+def kollen(V, L):
+    #V is the list
+    #L is the symbol
+    #temporary variables are created
+    forsta = len(V)
+    counter = 0
+    b = 0
+    sant = 0
+    #Checks every element in the list. 
+    #Adds one to a counter if it finds one of the selected letters
+    #resets counter if another letter appears
+    #if counter reaches 5 save the victory
+    for a in V:
+    	counter = counter +1
+    	if a == L:
+       	   b = b+1
+    	elif a is not L:
+    	   b = 0
+    	if b == 5:
+       	   print "Hurra! det ar fem ", L, " i rad!"
+       	   sant = 1
+    	elif counter == forsta and  sant == 0 :
+       	     print "Helvete! Det ar inte fem ", L, " i rad!"
+    #Inget returneras
+
+def question():
+    #Input questions are here
+    #No input
+    print "Vill du testa lista A, B eller C?"
+    #Temporary variable is created
+    inputing = 1
+    #Keeps on questioning until it gets a correct answer
+    while inputing is 1:
+	V = raw_input()
+	if V == 'A':
+	   V = A
+	   inputing = 0
+	if V == 'B':
+	   V = B
+	   inputing = 0
+	if V == 'C':
+	   V = C
+	   inputing = 0
+	elif V != A and V != B:
+	   print"Skriv ordentligt nob"
+
+
+    print "Vill du leta efter X eller O?"
+    inputing = 1
+
+    while inputing is 1:
+	L = raw_input()
+	if L is not 'X' and L is not 'O' :
+	  print "Skriv ordentligt nob"
+	elif L == 'X' or L == 'O':
+	  inputing = 0
+    #returns V - the list and L - the letter
+    return [V, L]
+
+
+print "Har testas tva listor om de innehaller fem i rad av X eller O"
+print "Lista A har fem X i rad"
+print A
+print "Lista B har fem O i rad"
+print B
+print "Lista C har inget"
+print C
+
+#Gets input
+[V, L] = question()
+#Calculates
+kollen(V, L)

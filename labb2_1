@@ -1,0 +1,18 @@
+v = open("recept","r")
+
+print v.read()
+
+data = open("recept","r")
+first_words =[p.split()[0] for p in data]
+print first_words
+print "test1"
+
+for K in range(0,len(first_words)):
+
+	if any("shoes" in s for s in first_words[K]):
+		print data.readlines()[K]
+print "test1 slut"
+#for K in range(0,len(first_words)):
+ #   data = open("recept","r")
+  #  if first_words[K] is not 's':
+   #    print data.readlines()[K]
