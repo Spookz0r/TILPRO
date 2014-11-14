@@ -2,7 +2,7 @@ A = ['X', 'O', '20' , 'X', 'X', 'X', 'X', 'X', '4']
 B =  ['O', 'O', 'X' , 'O', 'O', 'O', 'O', 'O', '4']
 C = ['1', '6', '20' , 'B', 'A', 'J', 'S', 'X', '4']
 
-
+#el
 def kollen(V, L):
     #V is the list
     #L is the symbol
